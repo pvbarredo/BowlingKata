@@ -42,4 +42,15 @@ public class BowlingTest {
 
         Assert.assertEquals(60, bowlingGame.getScore());
     }
+
+    @Test
+    public void given_all_shot_is_spare_and_the_first_ball_is_4_then_score_should_be_140() {
+        for (int i = 0; i < 11; i++) {
+            frames.add(new Frame(4,6));
+            
+        }
+        frames.add(new Frame(4,0));
+
+        Assert.assertEquals(140, bowlingGame.getScore());
+    }
 }
