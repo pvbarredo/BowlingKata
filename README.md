@@ -1,0 +1,9 @@
+# BowlingKata
+Java Program - Bowling Game
+
+TDD approach
+
+Initial Case
+given_a_bowling_game_then_it_should_return_a_score
+given_all_shot_is_gutter_balls_then_score_should_be_0
+given_all_shot_is_3_then_score_should_be_60
