@@ -4,8 +4,10 @@ Java Program - Bowling Game
 TDD approach
 
 Initial Case
+````
 given_a_bowling_game_then_it_should_return_a_score
 given_all_shot_is_gutter_balls_then_score_should_be_0
 given_all_shot_is_3_then_score_should_be_60
-given_all_shot_is_spare_and_the_first_ball_is_4_then_score_should_be_140
+given_10_pairs_of_5_and_spare_and_the_last_is_5_then_the_score_is_150
 given_perfect_game_then_score_should_be_300
+````

@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-public class BowlingTest {
+public class BowlingGameTest {
 
     BowlingGame bowlingGame;
     List<Frame> frames;
@@ -15,13 +15,6 @@ public class BowlingTest {
     public void setup(){
         bowlingGame = new BowlingGame();
         frames = bowlingGame.getFrames();
-    }
-
-    @Test
-    public void given_a_bowling_game_it_should_score() {
-
-        Assert.assertNotNull(bowlingGame.getScore());
-
     }
 
     @Test
@@ -44,13 +37,15 @@ public class BowlingTest {
     }
 
     @Test
-    public void given_all_shot_is_spare_and_the_first_ball_is_4_then_score_should_be_140() {
-        for (int i = 0; i < 11; i++) {
-            frames.add(new Frame(4,6));
-            
-        }
-        frames.add(new Frame(4,0));
+    public void given_10_pairs_of_5_and_spare_and_the_last_is_5_then_the_score_is_150() {
+        for (int i = 0; i < 10; i++) {
+            frames.add(new Frame(5,5));
 
-        Assert.assertEquals(140, bowlingGame.getScore());
+        }
+        frames.add(new Frame(5,0));
+
+        Assert.assertEquals(150, bowlingGame.getScore());
+
+
     }
 }

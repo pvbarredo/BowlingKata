@@ -14,12 +14,22 @@ public class BowlingGame {
 
     public int getScore() {
         int score = 0;
-        for (Frame frame : frames) {
-            score += frame.getFirstRoll() + frame.getSecondRoll();
-            if(frame.getFirstRoll() + frame.getSecondRoll() == 10){
 
+
+        for (int i = 0; i < 10; i++) {
+            Frame frame = frames.get(i);
+            if(frame.getFirstRoll()  + frame.getSecondRoll() == 10){
+
+                Frame secondFrame = frames.get(i + 1);
+                score += 10 + secondFrame.getFirstRoll();
+
+            }else{
+                score += frame.getFirstRoll()  + frame.getSecondRoll();
             }
+
+
         }
+
 
 
         return score;
