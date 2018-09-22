@@ -18,9 +18,9 @@ public class BowlingGame {
 
         for (int i = 0; i < 10; i++) {
             Frame frame = frames.get(i);
-            if(frame.getFirstRoll() == 10){
+            if(isStrike(frame)){
                 Frame secondFrame = frames.get(i + 1);
-                if(secondFrame.getFirstRoll() == 10){
+                if(isStrike(secondFrame)){
                     Frame thirdFrame = frames.get(i + 2);
                     score += 20 + thirdFrame.getFirstRoll();
 
@@ -42,6 +42,10 @@ public class BowlingGame {
         }
 
         return score;
+    }
+
+    private boolean isStrike(Frame secondFrame) {
+        return secondFrame.getFirstRoll() == 10;
     }
 
     private boolean isSpare(Frame frame) {
